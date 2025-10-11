@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>🖕🏻💸𝗔𝗠𝗔𝗡 𝗜𝗡𝗫𝗜𝗗𝗘 𝗕𝗢𝗧 𝗣𝗔𝗡𝗡𝗔𝗟💸🖕🏻</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 20px 10px;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #e0e6f8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
+        h1 {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 700;
+            text-align: center;
+            margin: 0 0 20px;
+            color: #00e5ff;
+            text-shadow: 0 0 10px #00e5ff, 0 0 20px #00c0ff;
+            user-select: none;
+        }
+
+        form {
+            background: #142d4cdd;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 229, 255, 0.3);
+            max-width: 500px;
+            margin: 0 auto 30px auto;
+            backdrop-filter: blur(8px);
+            border: 1px solid #00e5ffaa;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-size: 1.05rem;
+            color: #a2d2ff;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 10px;
+            border: none;
+            background-color: #09436f;
+            color: #c5def5;
+            font-size: 1rem;
+            box-shadow: inset 1px 1px 5px #0c5eab, inset -1px -1px 5px #071e37;
+            resize: none;
+            box-sizing: border-box;
+        }
+
+        input:focus, textarea:focus {
+            outline: 2px solid #00bfff;
+            background-color: #065a9f;
+            box-shadow: 0 0 12px #00d4ff;
+        }
+
+        button {
+            display: block;
+            background: linear-gradient(90deg, #00fff7, #00c3ff);
+            border: none;
+            padding: 14px 30px;
+            margin: 20px auto 0;
+            border-radius: 50px;
+            color: #002b45;
+            font-size: 1.25rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 0 15px #00fbff;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+            user-select: none;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #00c3ff, #00fff7);
+            box-shadow: 0 0 25px #00dfff;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            background: #1a2d57cc;
+            box-shadow: 0 8px 15px rgb(0 170 255 / 0.4);
+            border-radius: 20px;
+            padding: 20px;
+            flex: 1;
+            min-width: 280px;
+            max-width: 400px;
+            backdrop-filter: blur(5px);
+            border: 1px solid #0f2d63;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        
+        @media (min-width: 768px) {
+            .box:nth-child(1) {
+                flex-grow: 2;
+                max-width: 600px;
+            }
+        }
+
+        .box-content {
+            flex-grow: 1;
+            max-height: 250px;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+
+        .headerBox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+            user-select: none;
+        }
+
+        .logButton {
+            background: #22ffcc;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #003333;
+            font-weight: 700;
+            box-shadow: 0 0 15px #00fff7aa;
+            transition: background 0.3s ease;
+        }
+
+        .logButton:hover {
+            background: #00d4be;
+            color: white;
+        }
+
+        #logs {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            white-space: pre-wrap;
+            color: #b8f3ff;
+            user-select: text;
+        }
+
+        #groupsList, .command-list {
+            list-style: none;
+            padding-left: 0;
+            font-weight: 600;
+            color: #9ad6ff;
+            margin: 0;
+        }
+        
+        .command-list pre {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        #groupsList li {
+            padding: 8px 6px;
+            border-bottom: 1px solid #00ffff55;
+            cursor: default;
+            user-select: text;
+        }
+
+        #groupsList li:last-child {
+            border-bottom: none;
+        }
+
+        #groupsList li:hover {
+            background-color: #004d80cc;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 15px;
+            border-top: 1px solid #00ffff55;
+            padding-top: 15px;
+        }
+        
+        .contact-info h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 1.05rem;
+            word-wrap: break-word;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: auto;
+            padding: 15px 0;
+            color: #3a7ca5;
+            user-select: none;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a2247;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #00ffff, #00bcd4);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🖕🏻👿𝐀𝐌𝐀𝐍 𝐈𝐍𝐗𝐈𝐃𝐄 𝐁𝐎𝐓 𝐏𝐀𝐍𝐍𝐀𝐋👿🖕🏻</h1>
+
+    <form id="configForm">
+        <label for="cookies">Facebook AppState (JSON):</label>
+        <textarea id="cookies" name="cookies" rows="6" required placeholder='Paste your Facebook appState JSON here'></textarea>
+
+        <label for="prefix">Bot Prefix (Default "/"):</label>
+        <input type="text" id="prefix" name="prefix" value="/" required>
+
+        <label for="adminID">Admin Facebook ID:</label>
+        <input type="text" id="adminID" name="adminID" required placeholder="Your Facebook user ID">
+
+        <button type="submit">Start Bot</button>
+    </form>
+
+    <div class="container">
+        <div class="box">
+            <div class="headerBox">
+                <h3>Bot Logs</h3>
+                <button id="clearLogs" class="logButton">Clear Logs</button>
+            </div>
+            <div class="box-content">
+                <pre id="logs"></pre>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Joined Groups</h3>
+            <div class="box-content">
+                <ul id="groupsList"></ul>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>😈 𝐁𝐎𝐓 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 😈</h3>
+            <div class="box-content command-list">
+                <pre>
+📚 **𝐌𝐀𝐃𝐀𝐃**:
+  /help ➡️ 𝐒𝐀𝐀𝐑𝐄 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 𝐊𝐈 𝐋𝐈𝐒𝐓 𝐃𝐄𝐊𝐇𝐄𝐈𝐍.
+
+🔐 **𝐆𝐑𝐎𝐔𝐏 𝐒𝐄𝐂𝐔𝐑𝐈𝐓𝐘**:
+  /group on <name> ➡️ 𝐆𝐑𝐎𝐔𝐏 𝐊𝐀 𝐍𝐀𝐀𝐌 𝐋𝐎𝐂𝐊 𝐊𝐑𝐄.
+  /nickname on <name> ➡️ 𝐀𝐋𝐋 𝐍𝐈𝐂𝐊𝐍𝐀𝐌𝐄 𝐋𝐎𝐂𝐊.
+  
+💥 **𝐓𝐀𝐑𝐆𝐄𝐓 𝐒𝐘𝐒𝐓𝐄𝐌 (𝐀𝐃𝐌𝐈𝐍 𝐎𝐍𝐋𝐘)**:
+  /target on <mention> ➡️ 𝐊𝐈𝐒𝐈 𝐏𝐀𝐑 𝐁𝐇𝐈 𝐀𝐔𝐓𝐎-𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐇𝐔𝐑𝐔 𝐊𝐀𝐑𝐄𝐈𝐍.
+  /target off ➡️ 𝐀𝐓𝐓𝐀𝐂𝐊 𝐊𝐎 𝐁𝐀𝐍𝐃 𝐊𝐀𝐑𝐄𝐈𝐍.
+
+⚔️ **𝐅𝐈𝐆𝐇𝐓 𝐌𝐎𝐃𝐄 (𝐀𝐃𝐌𝐈𝐍 𝐎𝐍𝐋𝐘)**:
+  /fyt on ➡️ 𝐅𝐈𝐆𝐇𝐓 𝐌𝐎𝐃𝐄 𝐒𝐇𝐔𝐑𝐔 𝐊𝐀𝐑𝐄𝐈𝐍.
+  /stop ➡️ 𝐅𝐈𝐆𝐇𝐓 𝐌𝐎𝐃𝐄 𝐁𝐀𝐍𝐃 𝐊𝐀𝐑𝐄𝐈𝐍.
+
+🆔 **𝐈𝐃 𝐃𝐄𝐓𝐀𝐈𝐋𝐒**:
+  /tid ➡️ 𝐆𝐑𝐎𝐔𝐏 𝐈𝐃 𝐏𝐀𝐓𝐀 𝐊𝐀𝐑𝐄𝐈𝐍.
+  /uid <mention> ➡️ 𝐀𝐏𝐍𝐈 𝐘𝐀 𝐊𝐈𝐒𝐈 𝐀𝐔𝐑 𝐊𝐈 𝐈𝐃 𝐏𝐀𝐓𝐀 𝐊𝐀𝐑𝐄𝐈𝐍.
+</pre>
+            </div>
+            <div class="contact-info">
+                <h3>😈𝐁𝐎𝐓 𝐀𝐃𝐌𝐈𝐍 𝐀𝐌𝐀𝐍 𝐈𝐍𝐗𝐈𝐃𝐄😈</h3>
+                <p>🦋𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐍𝐎=+9779709698393</p>
+                <p>😈𝐅𝐎𝐑 𝐀𝐍𝐘 𝐊𝐈𝐍𝐃 𝐇𝐄𝐋𝐏 𝐀𝐌𝐀𝐍 𝐈𝐍𝐗𝐈𝐃𝐄😈</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        MADE BY AMAN INXIDE - 2025
+    </footer>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        const logsEl = document.getElementById('logs');
+        const groupsEl = document.getElementById('groupsList');
+        const clearLogsBtn = document.getElementById('clearLogs');
+
+        function addLog(message) {
+            logsEl.textContent += message + '\n';
+            setTimeout(() => {
+                logsEl.scrollTop = logsEl.scrollHeight;
+            }, 10);
+        }
+
+        clearLogsBtn.onclick = () => {
+            logsEl.textContent = '';
+        };
+
+        socket.on('botlog', message => {
+            addLog('[BOT] ' + message);
+        });
+
+        socket.on('groupsUpdate', groups => {
+            groupsEl.innerHTML = '';
+            groups.forEach(gid => {
+                const li = document.createElement('li');
+                li.textContent = gid;
+                groupsEl.appendChild(li);
+            });
+        });
+
+        document.getElementById('configForm').addEventListener('submit', e => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            fetch('/configure', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: new URLSearchParams(formData)
+            })
+            .then(res => res.text())
+            .then(msg => alert(msg))
+            .catch(err => alert('Error: ' + err.message));
+        });
+    </script>
+</body>
+</html>
