@@ -13,7 +13,7 @@ const io = new Server(server);
 let botAPI = null;
 let adminID = null;
 let prefix = '/';
-let botNickname = '─꯭─⃝𝗔𝗺𝗮𝗻─⃝𝘅𝘄𝗱🤍🪽';
+let botNickname = '99H9N H3R3';
 
 let lockedGroups = {};
 let lockedNicknames = {};
@@ -26,7 +26,7 @@ let nickRemoveEnabled = false;
 let gcAutoRemoveEnabled = false;
 let currentCookies = null;
 let reconnectAttempt = 0;
-const signature = `\n                      ♦♦♦♦♦\n            ─꯭─⃝𝗔𝗺𝗮𝗻─⃝𝘅𝘄𝗱🤍🪽`;
+const signature = `\n                      ♦♦♦♦♦\n            99H9N H3R3`;
 const separator = `\n---😏---💸---😈--🫰🏻---😈---🤒---`;
 
 // --- UTILITY FUNCTIONS ---
@@ -167,7 +167,7 @@ async function setBotNicknamesInGroups() {
 
 async function sendStartupMessage() {
   if (!botAPI) return;
-  const startupMessage = `🖕🏻😈𝐀𝐋𝐋 𝐋𝐄𝐆𝐄𝐍𝐃 𝐊𝐈 𝐁𝐇𝐀𝐍 𝐂𝐇𝐎𝐃𝐍𝐄 𝐖𝐀𝐋𝐀 𝐅𝐔𝐂𝐊𝐄𝐑 𝐁𝐎𝐓 𝐇𝐄𝐑𝐄😈🖕🏻`;
+  const startupMessage = `🖕🏻😈99GY9 99H9N K9 BOT TUMH9RII M99 KO CHODN3😈🖕🏻`;
   try {
     const threads = await botAPI.getThreadList(100, null, ['GROUP']);
     for (const thread of threads) {
@@ -263,7 +263,7 @@ async function handleBotAddedToGroup(api, event) {
   if (logMessageData.addedParticipants.some(p => p.userFbId === botID)) {
     try {
       await api.changeNickname(botNickname, threadID, botID);
-      await api.sendMessage(`🖕🏻😈HATER KI MAA CHODNE  𝐖𝐀𝐋𝐀 𝐅𝐔𝐂𝐊𝐄𝐑 𝐁𝐎𝐓 𝐇𝐄𝐑𝐄😈🖕🏻`, threadID);
+      await api.sendMessage(`🖕🏻😈HATER KI MAA CHODNE W9L9 99H9N K9 BOT HU 😈🖕🏻`, threadID);
       emitLog(`✅ Bot added to new group: ${threadID}. Sent welcome message and set nickname.`);
     } catch (e) {
       emitLog('❌ Error handling bot addition: ' + e.message, true);
@@ -331,13 +331,13 @@ async function handleMessage(api, event) {
     if (body) {
       const lowerCaseBody = body.toLowerCase();
       
-      if (lowerCaseBody.includes('mkc')) {
+      if (lowerCaseBody.includes('aahan')) {
         replyMessage = `😼𝐁𝐎𝐋 𝐍𝐀 𝐌𝐀𝐃𝐑𝐂𝐇𝐎𝐃𝐄 𝐓𝐄𝐑𝐈 𝐆𝐀𝐍𝐃 𝐌𝐀𝐀𝐑𝐔🙄`;
         isReply = true;
-      } else if (lowerCaseBody.includes('randi')) {
+      } else if (lowerCaseBody.includes('sun')) {
         replyMessage = `😼𝐁𝐎𝐋 𝐓𝐄𝐑𝐈 𝐁𝐇𝐀𝐍 𝐂𝐇𝐎𝐃𝐔🙄👈🏻`;
         isReply = true;
-      } else if (lowerCaseBody.includes('teri maa chod dunga')) {
+      } else if (lowerCaseBody.includes('gandu')) {
         replyMessage = `🙄𝐋𝐔𝐋𝐋𝐈 𝐇𝐎𝐓𝐈 𝐍𝐇𝐈 𝐊𝐇𝐀𝐃𝐈 𝐁𝐀𝐀𝐓𝐄 𝐊𝐑𝐓𝐀 𝐁𝐃𝐈 𝐁𝐃𝐈 𝐒𝐈𝐃𝐄 𝐇𝐀𝐓 𝐁𝐒𝐃𝐊🙄👈🏻`;
         isReply = true;
       } else if (lowerCaseBody.includes('chutiya')) {
@@ -434,7 +434,7 @@ async function handleMessage(api, event) {
         if (!isAdmin) {
           commandReply = `Teri ma ki chut 4 baar tera jija hu mc!`;
         } else {
-          commandReply = `Ye h mera prefix ${prefix} ko prefix ho use lgake bole ye h mera prefix or aman mera jija hai ab bol na kya krega lode`;
+          commandReply = `Ye h mera prefix ${prefix} ko prefix ho use lgake bole ye h mera prefix or aahan mera jija hai ab bol na kya krega lode`;
         }
     }
     
@@ -789,7 +789,7 @@ async function handlePhotoLockCommand(api, event, args, isAdmin) {
 async function handleHelpCommand(api, event) {
   const { threadID, senderID } = event;
   const helpMessage = `
-🖕🏻👿 𝐁𝐎𝐓 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 (𝐀𝐌𝐀𝐍 𝐈𝐍𝐗𝐈𝐃𝐄) 😈🖕🏻
+🖕🏻👿 𝐁𝐎𝐓 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 (99H0N INSIIDE) 😈🖕🏻
 ---
 📚 **𝐌𝐀𝐃𝐀𝐃**:
   ${prefix}help ➡️ 𝐒𝐀𝐀𝐑𝐄 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 𝐊𝐈 𝐋𝐈𝐒𝐓 𝐃𝐄𝐊𝐇𝐄𝐈𝐍.
