@@ -1,5 +1,5 @@
 {
-  "name": "99H9N K9 BOT",
+  "name": "AAHAN KA BOT",
   "version": "1.0.0",
   "description": "Facebook Messenger 99H9N Bot using ws3-fca and Express",
   "main": "index.js",
@@ -17,6 +17,6 @@
   "devDependencies": {
     "nodemon": "^3.1.0"
   },
-  "author": "99H9N INSIID3",
+  "author": "AAHAN INSIIDE",
   "license": "MIT"
 }  
