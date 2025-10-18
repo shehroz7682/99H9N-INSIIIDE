@@ -1,5 +1,5 @@
 {
-  "name": "AAHAN KA BOT",
+  "name": "mastii-bot",
   "version": "1.0.0",
   "description": "Facebook Messenger 99H9N Bot using ws3-fca and Express",
   "main": "index.js",
