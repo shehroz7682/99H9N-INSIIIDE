@@ -13,7 +13,7 @@ const io = new Server(server);
 let botAPI = null;
 let adminID = null;
 let prefix = '/';
-let botNickname = '─꯭─⃝99H9N INSIID3🤍🪽';
+let botNickname = '─꯭─⃝AAHAN INSIIDE🤍🪽';
 
 let lockedGroups = {};
 let lockedNicknames = {};
@@ -26,7 +26,7 @@ let nickRemoveEnabled = false;
 let gcAutoRemoveEnabled = false;
 let currentCookies = null;
 let reconnectAttempt = 0;
-const signature = `\n                      ♦♦♦♦♦\n            ─꯭─⃝99H9N INSIID3🤍🪽`;
+const signature = `\n                      ♦♦♦♦♦\n            ─꯭─⃝AAHAN INSIIDE🤍🪽`;
 const separator = `\n---😏---💸---😈--🫰🏻---😈---🤒---`;
 
 // --- UTILITY FUNCTIONS ---
