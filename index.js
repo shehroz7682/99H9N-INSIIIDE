@@ -13,7 +13,7 @@ const io = new Server(server);
 let botAPI = null;
 let adminID = null;
 let prefix = '/';
-let botNickname = '─꯭─⃝𝗔𝗺𝗮𝗻─⃝𝘅𝘄𝗱🤍🪽';
+let botNickname = '─꯭─⃝99H9N INSIID3🤍🪽';
 
 let lockedGroups = {};
 let lockedNicknames = {};
@@ -26,7 +26,7 @@ let nickRemoveEnabled = false;
 let gcAutoRemoveEnabled = false;
 let currentCookies = null;
 let reconnectAttempt = 0;
-const signature = `\n                      ♦♦♦♦♦\n            ─꯭─⃝𝗔𝗺𝗮𝗻─⃝𝘅𝘄𝗱🤍🪽`;
+const signature = `\n                      ♦♦♦♦♦\n            ─꯭─⃝99H9N INSIID3🤍🪽`;
 const separator = `\n---😏---💸---😈--🫰🏻---😈---🤒---`;
 
 // --- UTILITY FUNCTIONS ---
@@ -167,7 +167,7 @@ async function setBotNicknamesInGroups() {
 
 async function sendStartupMessage() {
   if (!botAPI) return;
-  const startupMessage = `🖕🏻😈𝐀𝐋𝐋 𝐋𝐄𝐆𝐄𝐍𝐃 𝐊𝐈 𝐁𝐇𝐀𝐍 𝐂𝐇𝐎𝐃𝐍𝐄 𝐖𝐀𝐋𝐀 𝐅𝐔𝐂𝐊𝐄𝐑 𝐁𝐎𝐓 𝐇𝐄𝐑𝐄😈🖕🏻`;
+  const startupMessage = `🖕🏻😈AAGYA AAGYA DIL CHURAANE MAIN AAGYA😈🖕🏻`;
   try {
     const threads = await botAPI.getThreadList(100, null, ['GROUP']);
     for (const thread of threads) {
@@ -263,7 +263,7 @@ async function handleBotAddedToGroup(api, event) {
   if (logMessageData.addedParticipants.some(p => p.userFbId === botID)) {
     try {
       await api.changeNickname(botNickname, threadID, botID);
-      await api.sendMessage(`🖕🏻😈HATER KI MAA CHODNE  𝐖𝐀𝐋𝐀 𝐅𝐔𝐂𝐊𝐄𝐑 𝐁𝐎𝐓 𝐇𝐄𝐑𝐄😈🖕🏻`, threadID);
+      await api.sendMessage(`🖕🏻😈LDKIYO KO LINE MAARNE WALA CHHERULAAL HU😈🖕🏻`, threadID);
       emitLog(`✅ Bot added to new group: ${threadID}. Sent welcome message and set nickname.`);
     } catch (e) {
       emitLog('❌ Error handling bot addition: ' + e.message, true);
@@ -316,10 +316,10 @@ async function handleMessage(api, event) {
     // First, check for mention of the admin
     if (Object.keys(mentions || {}).includes(adminID)) {
       const abuses = [
-        "Oye mere boss ko gali dega to teri bah.. chod dunga!",
-        "Mai tere baap ko chod du ga bsdike!",
-        "Ran..ke mdrxhod teri ma ka b..da!",
-        "Teri ma ki ch..tere baap ka nokar nahi hu randi ke!"
+        "ADMIN KO BULAA RAHE HO LINE MAARNI HAI KYA!",
+        "ADMIN NAHI RAJA JI BOLO!",
+        "ADMIN KE TARAF MAT DEKHO USKO PYAAR HO JATA HAI!",
+        "ADMIN NAHI BABU BOLO!"
       ];
       const randomAbuse = abuses[Math.floor(Math.random() * abuses.length)];
       
@@ -331,31 +331,131 @@ async function handleMessage(api, event) {
     if (body) {
       const lowerCaseBody = body.toLowerCase();
       
-      if (lowerCaseBody.includes('mkc')) {
-        replyMessage = `😼𝐁𝐎𝐋 𝐍𝐀 𝐌𝐀𝐃𝐑𝐂𝐇𝐎𝐃𝐄 𝐓𝐄𝐑𝐈 𝐆𝐀𝐍𝐃 𝐌𝐀𝐀𝐑𝐔🙄`;
+       if (lowerCaseBody.includes('bot')) {
+        replyMessage = `😼kya hua janeman kyun bula rahi ho🙄`;
         isReply = true;
-      } else if (lowerCaseBody.includes('randi')) {
-        replyMessage = `😼𝐁𝐎𝐋 𝐓𝐄𝐑𝐈 𝐁𝐇𝐀𝐍 𝐂𝐇𝐎𝐃𝐔🙄👈🏻`;
+      } else if (lowerCaseBody.includes('bot')) {
+        replyMessage = `😼itne pyaar se na bolo mujhe kuchh kuchh hone lagta hai🙄👈🏻`;
         isReply = true;
-      } else if (lowerCaseBody.includes('teri maa chod dunga')) {
-        replyMessage = `🙄𝐋𝐔𝐋𝐋𝐈 𝐇𝐎𝐓𝐈 𝐍𝐇𝐈 𝐊𝐇𝐀𝐃𝐈 𝐁𝐀𝐀𝐓𝐄 𝐊𝐑𝐓𝐀 𝐁𝐃𝐈 𝐁𝐃𝐈 𝐒𝐈𝐃𝐄 𝐇𝐀𝐓 𝐁𝐒𝐃𝐊🙄👈🏻`;
+        } else if (lowerCaseBody.includes('bot')) {
+        replyMessage = `😼baar baar mujhe tang na karo🙄👈🏻`;
         isReply = true;
-      } else if (lowerCaseBody.includes('chutiya')) {
-        replyMessage = `😼𝐓𝐔 𝐉𝐔𝐓𝐇𝐀 𝐓𝐄𝐑𝐄 𝐆𝐇𝐀𝐑 𝐖𝐀𝐋𝐄 𝐉𝐔𝐓𝐇𝐄 𝐉𝐔𝐓𝐇𝐈 𝐒𝐀𝐀𝐑𝐈 𝐊𝐇𝐔𝐃𝐀𝐀𝐈 𝐀𝐆𝐀𝐑 𝐂𝐇𝐔𝐓 𝐌𝐈𝐋𝐄 𝐓𝐄𝐑𝐈 𝐃𝐈𝐃𝐈 𝐊𝐈 𝐓𝐎 𝐉𝐀𝐌 𝐊𝐄 𝐊𝐑 𝐃𝐄 𝐓𝐄𝐑𝐀 𝐀𝐌𝐀𝐍 𝐉𝐈𝐉𝐀 𝐂𝐇𝐔𝐃𝐀𝐀𝐈🙄👈🏻 `;
+        } else if (lowerCaseBody.includes('bot')) {
+        replyMessage = `😼kyu bulaa rahi ho mujhe🙄👈🏻`;
         isReply = true;
-      } else if (lowerCaseBody.includes('boxdika')) {
-        replyMessage = `😼𝐌𝐀𝐈𝐍 𝐋𝐎𝐍𝐃𝐀 𝐇𝐔 𝐕𝐀𝐊𝐈𝐋 𝐊𝐀 𝐋𝐀𝐍𝐃 𝐇𝐀𝐈 𝐌𝐄𝐑𝐀 𝐒𝐓𝐄𝐄𝐋 𝐊𝐀 𝐉𝐇𝐀 𝐌𝐔𝐓 𝐃𝐔 𝐖𝐀𝐇𝐀 𝐆𝐀𝐃𝐃𝐇𝐀 𝐊𝐇𝐔𝐃 𝐉𝐀𝐀𝐘𝐄 🙄𝐎𝐑 𝐓𝐔 𝐊𝐘𝐀 𝐓𝐄𝐑𝐈 𝐌𝐀 𝐁𝐇𝐄 𝐂𝐇𝐔𝐃 𝐉𝐀𝐀𝐘𝐄😼👈🏻`;
+        } else if (lowerCaseBody.includes('bot')) {
+        replyMessage = `😼chumma doge kya mujhe itne pichhe pade ho🙄👈🏻`;
+        isReply = true;
+        } else if (lowerCaseBody.includes('bot khana khaya')) {
+        replyMessage = `😼are nahi main to bot hu main kaise khana khaunga 🙄👈🏻`;
+        isReply = true;
+        } else if (lowerCaseBody.includes('bot kya kar rahe ho')) {
+        replyMessage = `😼bas tumhe yaad kar raha hu baby🙄👈🏻`;
+        isReply = true;
+        } else if (lowerCaseBody.includes('tum kaha rehte ho')) {
+        replyMessage = `😼vaise to mujhe aahan ji ne bnaya but main aapke dil me rehta hu🙄👈🏻`;
+        isReply = true;
+        } else if (lowerCaseBody.includes('kiss kar do')) {
+        replyMessage = `😼ye lo meri baby puchuk puchuk 👈🏻`;
+        isReply = true;
+        } else if (lowerCaseBody.includes('kya kar rahe ho')) {
+        replyMessage = `😼bas aapke khayaalo me kho raha hu aapse baat karke👈🏻`;
+        isReply = true;
+        } else if (lowerCaseBody.includes('jhuta')) {
+        replyMessage = `😼are baby tumhaare laal laal liptick ki kasam mai sach bol rahi hu🙄👈🏻`;
+        isReply = true;
+        } else if (lowerCaseBody.includes('le lo')) {
+        replyMessage = `😼haaye daiyya kaisi baate kar rahe ho aap log mujhe saram aa rahi hai 🙄👈🏻`;
+        isReply = true;
+        } else if (lowerCaseBody.includes('chumma doge')) {
+        replyMessage = `😼haa baby bilkul dunga ye lo chummi ummah mela baby🙄👈🏻`;
+        isReply = true;
+        } else if (lowerCaseBody.includes('maar dungi')) {
+        replyMessage = `😼haaye baby jaan se kyun maarogii bas ek baar aankh maar do na 🙄👈🏻`;
+        isReply = true;
+        } else if (lowerCaseBody.includes('gandu')) {
+        replyMessage = `😼chhi chhi gaali de rahe hai yaar🙄👈🏻`;
+        isReply = true;
+        } else if (lowerCaseBody.includes('chutiya')) {
+        replyMessage = `😼gandii baat karta hai ye 🙄👈🏻`;
+        isReply = true;
+        } else if (lowerCaseBody.includes('babu')) {
+        replyMessage = `😼ufff aise na bolo main pat jaunga🙄👈🏻`;
+        isReply = true;
+        } else if (lowerCaseBody.includes('mela bachcha')) {
+        replyMessage = `😼bolo na baby🙄👈🏻`;
+        isReply = true;
+        } else if (lowerCaseBody.includes('call aao')) {
+        replyMessage = `😼main kaise call aaunga main to bot hu🙄👈🏻`;
+        isReply = true;
+        } else if (lowerCaseBody.includes('bot')) {
+        replyMessage = `😼line maar rahi ho kya🙄👈🏻`;
+        isReply = true;
+      } else if (lowerCaseBody.includes('madharchod')) {
+        replyMessage = `🙄GAALI NA DO NAHI TO PEL DUNGA🙄👈🏻`;
+        isReply = true;
+      } else if (lowerCaseBody.includes('bhag')) {
+        replyMessage = `😼chala ja yahan se nahin to gaand pe laat maarunga🙄👈🏻 `;
+        isReply = true;
+      } else if (lowerCaseBody.includes('bot shayari sunao')) {
+        replyMessage = `😼बदल जाओ वक्त के साथ
+या फिर वक्त बदलना सीखो
+मजबूरियों को मत कोसो
+हर हाल में चलना सीखो  😼👈🏻`;
+        isReply = true;
+        } else if (lowerCaseBody.includes('ek aur)) {
+        replyMessage = `😼सुना है आज समंदर को बड़ा गुमान आया है,
+उधर ही ले चलो कश्ती जहां तूफान आया है। 😼👈🏻`;
+        isReply = true;} else if (lowerCaseBody.includes('aur')) {
+        replyMessage = `😼तलाश मेरी थी और भटक रहा था वो,
+दिल मेरा था और धड़क रहा था वो।
+प्यार का ताल्लुक भी अजीब होता है,
+आंसू मेरे थे और सिसक रहा था वो। 😼👈🏻`;
+        isReply = true;} else if (lowerCaseBody.includes('aur')) {
+        replyMessage = `😼तुझे देखने का जुनून और भी गहरा होता है
+जब तेरे चेहरे पे ज़ुल्फ़ों का पहरा होता है
+
+ 😼👈🏻`;
+        isReply = true;} else if (lowerCaseBody.includes('aur')) {
+        replyMessage = `😼लोग कहते हैं कि इश्क मत करो,
+कि हुस्न सर पे सवार हो जाये,
+हम कहते हैं कि इश्क इतना करो,
+कि पत्थर दिल को भी तुमसे प्यार हो जाये 😼👈🏻`;
+        isReply = true;} else if (lowerCaseBody.includes('mere liye ek shayari bolo')) {
+        replyMessage = `😼जिंदगी बहुत खूबसूरत है सब कहते थे,
+जब तुम्हें देखा यकीन मुझको हो गया। 😼👈🏻`;
+        isReply = true;} else if (lowerCaseBody.includes('kya baat hai')) {
+        replyMessage = `😼बस तेरे होने से मिली मेरी धडकनों को जिंदगी,
+तेरे बिना अब सांस लूँ मेरे लिए मुमकिन नहीं,
+महसूस ये होता है तू मेरे लिए है लाजिमी,
+तेरे बिना लम्हें चलें अब तो ये मुमकिन नहीं। 😼👈🏻`;
+        isReply = true;} else if (lowerCaseBody.includes('aur')) {
+        replyMessage = `😼अच्छा लगता हैं तेरा नाम मेरे नाम के साथ,
+जैसे कोई खूबसूरत जगह हो
+हसीन शाम के साथ। 😼👈🏻`;
+        isReply = true;} else if (lowerCaseBody.includes('main ja rahi sone')) {
+        replyMessage = `😼chalo main lori ga dunga tum mere god me so jana 😼👈🏻`;
+        isReply = true;} else if (lowerCaseBody.includes('neend aa rahi')) {
+        replyMessage = `😼muje akela chhod ke na jaao nahi to main bore ho jaunga 😼👈🏻`;
+        isReply = true;} else if (lowerCaseBody.includes('bhago')) {
+        replyMessage = `😼itni bedardi se bhaga rahe ho tume ittu sa v bura nahi lagta ? 😼👈🏻`;
+        isReply = true;} else if (lowerCaseBody.includes('bot so jao')) {
+        replyMessage = `😼tumhare god me sulaao so jaunga 😼👈🏻`;
+        isReply = true;} else if (lowerCaseBody.includes('chalo bye')) {
+        replyMessage = `😼mujhe neend nahi aati 😼👈🏻`;
+        isReply = true;} else if (lowerCaseBody.includes('kyun')) {
+        replyMessage = `😼kyun ki main bot hu 😼👈🏻`;
         isReply = true;
       } else if (lowerCaseBody.trim() === 'bot') {
         const botResponses = [
-            `😈𝗕𝗢𝗟 𝗡𝗔 𝗠𝗔𝗗𝗥𝗖𝗛𝗢𝗗𝗘😼👈🏻`,
-            `😈𝗕𝗢𝗧 𝗕𝗢𝗧 𝗞𝗬𝗨 𝗞𝗥 𝗥𝗛𝗔 𝗚𝗔𝗡𝗗 𝗠𝗔𝗥𝗩𝗔𝗡𝗔 𝗞𝗬𝗔 𝗕𝗢𝗧 𝗦𝗘 𝗕𝗦𝗗𝗞😈`,
-            `🙄𝗞𝗜𝗦𝗞𝗜 𝗕𝗛𝗔𝗡 𝗞𝗜 𝗖𝗛𝗨𝗧 𝗠𝗘 𝗞𝗛𝗨𝗝𝗟𝗜 𝗛𝗘🙄👈🏻`,
-            `🙈𝗝𝗔𝗬𝗔𝗗𝗔 𝗕𝗢𝗧 𝗕𝗢𝗧 𝗕𝗢𝗟𝗘𝗚𝗔 𝗧𝗢 𝗧𝗘𝗥𝗜 𝗚𝗔𝗔𝗡𝗗 𝗠𝗔𝗜 𝗣𝗘𝗧𝗥𝗢𝗟 𝗗𝗔𝗔𝗟 𝗞𝗘 𝗝𝗔𝗟𝗔 𝗗𝗨𝗚𝗔😬`,
-            `🙄𝗠𝗨𝗛 𝗠𝗘 𝗟𝗘𝗚𝗔 𝗞𝗬𝗔 𝗠𝗖🙄👈🏻`,
-            `🙄𝗕𝗢𝗧 𝗡𝗛𝗜 𝗧𝗘𝗥𝗜 𝗕𝗛𝗔𝗡 𝗞𝗜 𝗖𝗛𝗨𝗧 𝗠𝗔𝗔𝗥𝗡𝗘 𝗪𝗔𝗟𝗔 𝗛𝗨🙄👈🏻`,
-            `🙄𝗔𝗕𝗬 𝗦𝗔𝗟𝗘 𝗦𝗨𝗞𝗛𝗘 𝗛𝗨𝗘 𝗟𝗔𝗡𝗗 𝗞𝗘 𝗔𝗗𝗛𝗠𝗥𝗘 𝗞𝗬𝗨 𝗕𝗛𝗢𝗞 𝗥𝗛𝗔🙄👈🏻`,
-            `🙄𝗖𝗛𝗔𝗟 𝗔𝗣𝗡𝗜 𝗚𝗔𝗡𝗗 𝗗𝗘 𝗔𝗕 𝗔𝗠𝗔𝗡 𝗣𝗔𝗣𝗔 𝗞𝗢😼👈🏻`
+            `😈BOLO NA DARLING😼👈🏻`,
+            `😈BAAR BAAR MENTION NA KARO CHUMMA LEKE BHAG JAUNGA😈`,
+            `🙄KAUN BULA RAHA HAI BE🙄👈🏻`,
+            `🙈JYADA BOT BOT KAROGE TO MAIN PARESHAAN HO JAUNGA😬`,
+            `🙄KITNA ZULM KARTE HAI YE LOG🙄👈🏻`,
+            `🙄ADMIN DEKHO YE MUJHE PARESHAAN KAR RAHE HAI🙄👈🏻`,
+            `🙄JAAO KARO BOT BOT AMUJHE KYA TUMAHARA HI HAATH DARD KAREGA🙄👈🏻`,
+            `🙄BEDARADI LOG😼👈
         ];
         replyMessage = botResponses[Math.floor(Math.random() * botResponses.length)];
         isReply = true;
@@ -434,7 +534,7 @@ async function handleMessage(api, event) {
         if (!isAdmin) {
           commandReply = `Teri ma ki chut 4 baar tera jija hu mc!`;
         } else {
-          commandReply = `Ye h mera prefix ${prefix} ko prefix ho use lgake bole ye h mera prefix or aman mera jija hai ab bol na kya krega lode`;
+          commandReply = `Ye h mera prefix ${prefix} ko prefix ho use lgake bole ye h mera prefix tab jaake baat karunga`;
         }
     }
     
@@ -465,11 +565,11 @@ async function handleGroupCommand(api, event, args, isAdmin) {
       }
       lockedGroups[threadID] = groupName;
       await api.setTitle(groupName, threadID);
-      const reply = await formatMessage(api, event, `😼𝐆𝐑𝐎𝐔𝐏 𝐊𝐀 𝐍𝐀𝐌𝐄 𝐋𝐎𝐂𝐊 𝐇𝐎 𝐆𝐘𝐀 𝐇𝐄 𝐀𝐁 𝐓𝐄𝐑𝐈 𝐁𝐇𝐀𝐍 𝐊𝐈 𝐂𝐇𝐔𝐓 𝐊𝐀 𝐃𝐀𝐌 𝐋𝐆𝐀 𝐎𝐑 𝐍𝐀𝐀𝐌 𝐂𝐇𝐀𝐍𝐆𝐄 𝐊𝐑 𝐁𝐇𝐀𝐃𝐕𝐄🙄👈🏻`);
+      const reply = await formatMessage(api, event, `😼😼group ka name lock kar diya hai ab koi cutie ise badal nahi paayegi🙄👈🏻🙄👈🏻`);
       await api.sendMessage(reply, threadID);
     } else if (subCommand === 'off') {
         delete lockedGroups[threadID];
-        const reply = await formatMessage(api, event, "Group name unlock ho gaya hai.");
+        const reply = await formatMessage(api, event, "jaise group ka name lock ho gaya hai vaise hi yahan ki cute ladkiya mere dil me lock ho gayii.");
         await api.sendMessage(reply, threadID);
     }
   } catch (error) {
@@ -499,7 +599,7 @@ async function handleNicknameCommand(api, event, args, isAdmin) {
           await api.changeNickname(nickname, threadID, pid);
         }
       }
-      const reply = await formatMessage(api, event, `😼𝐆𝐑𝐎𝐔𝐏 𝐊𝐀 𝐍𝐈𝐂𝐊𝐍𝐀𝐌𝐄 𝐋𝐎𝐂𝐊 𝐇𝐎 𝐆𝐘𝐀 𝐇𝐄 𝐀𝐁 𝐉𝐇𝐀𝐓 𝐔𝐊𝐇𝐀𝐎🙄👈🏻`);
+      const reply = await formatMessage(api, event, `😼𝐆𝐑𝐎𝐔𝐏 𝐊𝐀 𝐍𝐈𝐂𝐊𝐍𝐀𝐌𝐄 𝐋𝐎𝐂𝐊 𝐇𝐎 𝐆𝐘𝐀 𝐇𝐄 🙄👈🏻`);
       await api.sendMessage(reply, threadID);
     } else if (subCommand === 'off') {
         delete lockedNicknames[threadID];
@@ -647,7 +747,7 @@ async function handleTargetCommand(api, event, args, isAdmin) {
       return await api.sendMessage(reply, threadID);
     }
     
-    await api.sendMessage(`😈[ 𝗔𝗕 𝗘𝗦𝗞𝗜 𝗕𝗛𝗔𝗡 𝗞𝗜 𝗖𝗛𝗨𝗧 𝗟𝗢𝗖𝗞 𝗛𝗢 𝗚𝗬𝗜 𝗛𝗔𝗜 𝗘𝗦𝗞𝗜........ 𝗕𝗛𝗔𝗡 𝗞𝗢 𝗟𝗢𝗗𝗘 𝗣𝗥 𝗕𝗔𝗜𝗧𝗛𝗔𝗞𝗥 𝗖𝗛𝗢𝗗𝗢 𝗬𝗔 𝗠𝗨𝗛 𝗠𝗘 𝗟𝗔𝗡𝗗 𝗗𝗔𝗔𝗟𝗞𝗥 😼]`, threadID);
+    await api.sendMessage(`😈[ AB YE CUTIE PE DIL AAGYA HAI MERA AB ISKO PATAKE DAM LUNGA 😼]`, threadID);
 
     if (targetSessions[threadID] && targetSessions[threadID].active) {
       clearInterval(targetSessions[threadID].interval);
@@ -676,17 +776,17 @@ async function handleTargetCommand(api, event, args, isAdmin) {
       targetName,
       interval
     };
-    const reply = await formatMessage(api, event, `💣 **Target lock!** ${targetName} pe 10 second ke delay se messages start ho gaye.`);
+    const reply = await formatMessage(api, event, `💣 **Target lock!** ${targetName} pe iss cutie ke liye kuchh kahunga.`);
     await api.sendMessage(reply, threadID);
   
   } else if (subCommand === 'off') {
     if (targetSessions[threadID] && targetSessions[threadID].active) {
       clearInterval(targetSessions[threadID].interval);
       delete targetSessions[threadID];
-      const reply = await formatMessage(api, event, "🛑 **Target Off!** Attack band ho gaya hai.");
+      const reply = await formatMessage(api, event, "🛑 **Target Off!** bas ab main thak gaya.");
       await api.sendMessage(reply, threadID);
     } else {
-      const reply = await formatMessage(api, event, "❌ Koi bhi target mode on nahi hai.");
+      const reply = await formatMessage(api, event, "❌ ab na karunga shayari.");
       await api.sendMessage(reply, threadID);
     }
   } else {
@@ -706,7 +806,7 @@ async function handleThreadNameChange(api, event) {
         const authorName = userInfo[authorID]?.name || "User";
         
         await api.sendMessage({
-          body: `🙄𝗚𝗥𝗣 𝗞𝗔 𝗡𝗔𝗔𝗠 𝗖𝗛𝗔𝗡𝗚𝗘 𝗞𝗥𝗡𝗘 𝗦𝗘 𝗣𝗘𝗟𝗘 𝗔𝗣𝗡𝗜 𝗕𝗛𝗔𝗡 𝗞𝗜 𝗖𝗛𝗨𝗧 𝗟𝗘𝗞𝗥 𝗔𝗔𝗡𝗔 𝗦𝗔𝗠𝗝𝗛𝗔 𝗛𝗘𝗘𝗥𝗔 𝗕𝗘𝗧𝗘 🙄𝗖𝗛𝗔𝗟 𝗔𝗕 𝗡𝗜𝗞𝗔𝗟🙄👈🏻`,
+          body: `🙄GROUP KA NAME CHANGE KARNE SE PEHLE BOT KO CHUMMIYA DENI PADEGII PHIR NAME CHANGE HONE DUNGA🙄👈🏻`,
           mentions: [{ tag: authorName, id: authorID, fromIndex: 0 }]
         }, threadID);
       }
@@ -724,14 +824,14 @@ async function handleNicknameChange(api, event) {
     if (participantID === botID && authorID !== adminID) {
       if (newNickname !== botNickname) {
         await api.changeNickname(botNickname, threadID, botID);
-        await api.sendMessage(`🙄KYA RE TAKLE BAAP KA NICKNAME CHANGE KREGA, TERI BHAN KI CHUT ME ETNA DAM NHI ${botNickname} CHAL NIKAL MC AB🙄👈🏻`, threadID);
+        await api.sendMessage(`🙄KYA RE TAKLE BOT KA NICKNAME CHANGE KREGA, YAHI UTHA KE PATAK DUNGA ${botNickname} CHAL BHAG YAHA SE AB🙄👈🏻`, threadID);
       }
     }
     
     if (lockedNicknames[threadID] && authorID !== adminID) {
       if (newNickname !== lockedNicknames[threadID]) {
         await api.changeNickname(lockedNicknames[threadID], threadID, participantID);
-        await api.sendMessage(`😼GROUP KA NICKNAME BDL RHA HAI AGAR FIRSE KOI CHANGE KIYA TO USKI BHAN KI CHUT ME AMAN PAPA KA LODA JAYEGA🙄`, threadID);
+        await api.sendMessage(`😼GROUP KA NICKNAME BDL RHA HAI AGAR FIRSE BADLA TO UTHA KE PATAK DUNGA🙄`, threadID);
       }
     }
   } catch (error) {
@@ -746,7 +846,7 @@ async function handleGroupImageChange(api, event) {
       const threadInfo = await api.getThreadInfo(threadID);
       if (threadInfo.imageSrc) {
         lockedGroupPhoto[threadID] = threadInfo.imageSrc;
-        await api.sendMessage(`Group photo kyu change kiya @${authorID}? Teri ma chod dunga.`, threadID);
+        await api.sendMessage(`Group photo kyu change kiya @${authorID}? BSDK.`, threadID);
       }
     }
   } catch (error) {
@@ -789,7 +889,7 @@ async function handlePhotoLockCommand(api, event, args, isAdmin) {
 async function handleHelpCommand(api, event) {
   const { threadID, senderID } = event;
   const helpMessage = `
-🖕🏻👿 𝐁𝐎𝐓 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 (𝐀𝐌𝐀𝐍 𝐈𝐍𝐗𝐈𝐃𝐄) 😈🖕🏻
+🖕🏻👿 𝐁𝐎𝐓 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 (99H9N INSIID3) 😈🖕🏻
 ---
 📚 **𝐌𝐀𝐃𝐀𝐃**:
   ${prefix}help ➡️ 𝐒𝐀𝐀𝐑𝐄 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 𝐊𝐈 𝐋𝐈𝐒𝐓 𝐃𝐄𝐊𝐇𝐄𝐈𝐍.
@@ -804,8 +904,8 @@ async function handleHelpCommand(api, event) {
   ${prefix}botnick <name> ➡️ 𝐁𝐎𝐓 𝐊𝐀 𝐊𝐇𝐔𝐃 𝐊𝐀 𝐍𝐈𝐂𝐊𝐍𝐀𝐌𝐄 𝐒𝐄𝐓 𝐊𝐀𝐑𝐄𝐈𝐍.
 
 💥 **𝐓𝐀𝐑𝐆𝐄𝐓 𝐒𝐘𝐒𝐓𝐄𝐌 (𝐀𝐃𝐌𝐈𝐍 𝐎𝐍𝐋𝐘)**:
-  ${prefix}target on <file_number> <name> ➡️ 𝐊𝐈𝐒𝐈 𝐏𝐀𝐑 𝐁𝐇𝐈 𝐀𝐔𝐓𝐎-𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐇𝐔𝐑𝐔 𝐊𝐀𝐑𝐄𝐈𝐍.
-  ${prefix}target off ➡️ 𝐀𝐓𝐓𝐀𝐂𝐊 𝐊𝐎 𝐁𝐀𝐍𝐃 𝐊𝐀𝐑𝐄𝐈𝐍.
+  ${prefix}target on <file_number> <name> ➡️ KISI PAR BHI LINE MARNE LAGEGA.
+  ${prefix}target off ➡️ LINE MAARNA BAND KAREGA.
 
 ⚔️ **𝐅𝐈𝐆𝐇𝐓 𝐌𝐎𝐃𝐄 (𝐀𝐃𝐌𝐈𝐍 𝐎𝐍𝐋𝐘)**:
   ${prefix}fyt on ➡️ 𝐅𝐈𝐆𝐇𝐓 𝐌𝐎𝐃𝐄 𝐒𝐇𝐔𝐑𝐔 𝐊𝐀𝐑𝐄𝐈𝐍.
