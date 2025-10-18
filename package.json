@@ -1,7 +1,7 @@
 {
-  "name": "aman-bot",
+  "name": "99H9N K9 BOT",
   "version": "1.0.0",
-  "description": "Facebook Messenger Aman Bot using ws3-fca and Express",
+  "description": "Facebook Messenger 99H9N Bot using ws3-fca and Express",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -17,6 +17,6 @@
   "devDependencies": {
     "nodemon": "^3.1.0"
   },
-  "author": "Aman inxide",
+  "author": "99H9N INSIID3",
   "license": "MIT"
 }  
